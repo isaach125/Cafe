@@ -1,0 +1,54 @@
+h1 {
+    text-align: center;
+    font-size: 65px;
+    font-family: Candara;
+    margin: 0;
+    margin-top: 2%;
+    color: #333333;
+}
+
+main{
+    text-align: center;
+    margin-top: 5%;
+}
+
+#nav {
+    text-align: center;
+    padding: 0;
+}
+
+#nav li {
+    font-size: 15px;
+    font-family: Candara;
+    display: inline;
+}
+
+#nav a {
+    text-decoration: none;
+    padding: 1px 18px;
+    color: #333333;
+}
+
+#nav li a:hover {
+    text-decoration: underline;
+}
+
+#login {
+    text-align: center;
+    margin: 50px;
+}
+
+#login input,button{
+    border-radius: 6px;
+    width : 200px;
+    margin: 10px;
+}
+
+#login input::placeholder{
+    text-align: center;
+}
+
+#login input[type=text],[type=password]{
+    text-align: center;
+}
+

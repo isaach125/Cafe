@@ -1,0 +1,25 @@
+{% extends 'template.html.twig' %}
+
+{% block main %}
+
+    Visitor list:
+    <ul>
+        {% for user in users %}
+            <li>
+                id({{ user.id }}) /
+                {{ user.username }}<br>
+            </li>
+        {% endfor %}
+
+        <form action="index.php" method="post">
+            <input type="hidden" name="action" value="updateUserProcess">
+            <p>id:<input type="int" name="id"></p>
+            <p>username:<input type="text" name="username"></p>
+            <p>password:<input type="text" name="password"></p>
+            <input type="submit" value="Update">
+        </form>
+    </ul>
+
+    <a href="index.php?action=listUser">back</a>
+
+{% endblock %}

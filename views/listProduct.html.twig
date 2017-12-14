@@ -1,0 +1,20 @@
+{% extends 'template.html.twig' %}
+
+{% block main %}
+
+Product list:
+<ul>
+    {% for product in products %}
+
+        <li>
+            id({{ product.id }}) /
+            {{ product.description }} /
+            price: {{ product.price }}<br>
+        </li>
+    {% endfor %}
+
+    <a href="index.php?action=updateListProduct">Update a product</a><br>
+    <a href="index.php?action=deleteListProduct">Delete all products</a>
+</ul>
+
+{% endblock %}

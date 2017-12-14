@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        @import "css/style.css";
+    </style>
+</head>
+<body>
+<header>Username: {{ sessname }}<hr></header>
+<h1>ISAAC CAFÉ</h1>
+
+<ul id="nav">
+    <li><a href="index.php?action=index">HOME</a></li>
+    <li><a href="index.php?action=admin">ADMIN</a></li>
+    <li><a href="index.php?action=staff">STAFF</a></li>
+    <li><a href="index.php?action=signUp">REGISTER</a></li>
+    <li><a href="index.php?action=login">LOGIN</a></li>
+    <li><a href="index.php?action=logout">LOGOUT</a></li>
+</ul>
+<main>
+    {% block main %}{% endblock %}
+</main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'template.html.twig' %}
+
+{% block main %}
+
+    Product list:
+    <ul>
+        {% for product in products %}
+
+            <li>
+                id({{ product.id }}) /
+                {{ product.description }} /
+                price: {{ product.price }}<br>
+            </li>
+        {% endfor %}
+
+        <form action="index.php" method="post">
+            <input type="hidden" name="action" value="updateProductProcess">
+            <p>id:<input type="int" name="id"></p>
+            <p>name:<input type="text" name="description"></p>
+            <p>price:<input type="float" name="price"></p>
+            <input type="submit" value="Update">
+        </form>
+    </ul>
+
+    <a href="index.php?action=listProduct">back</a>
+
+{% endblock %}
